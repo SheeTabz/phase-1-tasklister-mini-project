@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let form=document.querySelector('form')
   form.addEventListener('submit',(e)=>{
     e.preventDefault();
-      console.log(e.target.new-task-description.value)
-      handleTask(e.target.new-task-description.value)
-    
+      
+    const val = document.querySelector('input#new-task-description').value
+    console.log(val)
+    handleTask(val)
       form.reset()
   })
   
